@@ -20,3 +20,5 @@ RUN rm ~/chromedriver_linux64.zip
 RUN mv -f ~/chromedriver /usr/local/bin/chromedriver
 RUN chown root:root /usr/local/bin/chromedriver
 RUN chmod 0755 /usr/local/bin/chromedriver
+
+CMD [ "python", "-m", "homeassistant", "--config", "/config" ]
